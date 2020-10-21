@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Perfil Empresas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @perfilempresas.each do |perfilempresa| %>
+      <tr>
+        <td><%= link_to 'Show', perfilempresa %></td>
+        <td><%= link_to 'Edit', edit_perfilempresa_path(perfilempresa) %></td>
+        <td><%= link_to 'Destroy', perfilempresa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
